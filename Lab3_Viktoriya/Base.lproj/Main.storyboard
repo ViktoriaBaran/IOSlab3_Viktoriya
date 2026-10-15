@@ -1,24 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab3_Viktoriya" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2We-LZ-fxZ">
+                                <rect key="frame" x="0.0" y="75" width="393" height="759"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="ZQZ-qH-Ls7">
+                                        <rect key="frame" x="16" y="16" width="320" height="402.66666666666669"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="car" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ijT-hN-Wlb">
+                                                <rect key="frame" x="0.0" y="1.3333333333333357" width="320" height="77.333333333333314"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="YQd-Kg-ggK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Профіль автомобіля" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LfD-9A-2ZJ">
+                                                <rect key="frame" x="0.0" y="92" width="320" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введіть пробіг, км" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8P2-zT-o1a">
+                                                <rect key="frame" x="0.0" y="124.33333333333334" width="320" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                            </textField>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VbQ-4f-Hgw">
+                                                <rect key="frame" x="0.0" y="170.33333333333331" width="320" height="32"/>
+                                                <segments>
+                                                    <segment title="Механіка"/>
+                                                    <segment title="Автомат"/>
+                                                </segments>
+                                            </segmentedControl>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D65-TD-HCH">
+                                                <rect key="frame" x="0.0" y="213.33333333333331" width="320" height="100"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="100" id="4ks-iX-7cV"/>
+                                                </constraints>
+                                            </pickerView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="7tQ-tc-YZ1">
+                                                <rect key="frame" x="0.0" y="325.33333333333331" width="320" height="31"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Страхування" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNo-6P-2BG">
+                                                        <rect key="frame" x="0.0" y="5.3333333333333712" width="102.66666666666667" height="20.333333333333332"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="right" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7nN-9O-Kc6">
+                                                        <rect key="frame" x="271" y="0.0" width="51" height="31"/>
+                                                    </switch>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sIE-YV-HP1">
+                                                <rect key="frame" x="0.0" y="368.33333333333331" width="320" height="34.333333333333314"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Зберегти авто"/>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ntb-z9-vNK"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ZQZ-qH-Ls7" firstAttribute="top" secondItem="fhB-qB-KzG" secondAttribute="top" constant="16" id="4OR-4X-Dp1"/>
+                                    <constraint firstItem="ZQZ-qH-Ls7" firstAttribute="leading" secondItem="fhB-qB-KzG" secondAttribute="leading" constant="16" id="BuX-CO-K4T"/>
+                                    <constraint firstItem="ZQZ-qH-Ls7" firstAttribute="width" secondItem="2We-LZ-fxZ" secondAttribute="width" multiplier="0.814249" id="Dst-LZ-iuS"/>
+                                    <constraint firstItem="ZQZ-qH-Ls7" firstAttribute="trailing" secondItem="fhB-qB-KzG" secondAttribute="trailing" constant="16" id="iCB-Ic-f2D"/>
+                                    <constraint firstItem="ZQZ-qH-Ls7" firstAttribute="bottom" secondItem="fhB-qB-KzG" secondAttribute="bottom" constant="16" id="wbP-Tq-qx9"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="fhB-qB-KzG"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="ou3-iR-93Q"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2We-LZ-fxZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="GCy-NV-fSA"/>
+                            <constraint firstItem="2We-LZ-fxZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="16" id="Qp4-nQ-oe6"/>
+                            <constraint firstItem="2We-LZ-fxZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="16" id="mXs-fD-Jk2"/>
+                            <constraint firstItem="2We-LZ-fxZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="nF0-rh-CjB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="carImageView" destination="ijT-hN-Wlb" id="D3Y-h6-Gs4"/>
+                        <outlet property="enginePickerView" destination="D65-TD-HCH" id="YpR-Hc-5gX"/>
+                        <outlet property="insuranceSwitch" destination="7nN-9O-Kc6" id="ZMO-wv-XM7"/>
+                        <outlet property="mileageTextField" destination="8P2-zT-o1a" id="dqr-jR-7iZ"/>
+                        <outlet property="saveButton" destination="sIE-YV-HP1" id="J9k-NT-wgR"/>
+                        <outlet property="transmissionSegment" destination="VbQ-4f-Hgw" id="cIp-o8-rLq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="car" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
